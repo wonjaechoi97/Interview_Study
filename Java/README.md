@@ -15,8 +15,12 @@
 
 
 ### 객체지향 설계 5 원칙 S.O.L.I.D
-- S
-- O
-- L
-- I
-- D
+- S : Single Responsibility, 단일 책임 원칙
+  - 클래스는 단 한개의 책임(기능)을 가져야 한다.
+  - 클래스를 변경하는 이유는 단 하나여아 한다.
+  - 이를 지키지 않으면, 한 책임의 변경에 의해 다른 책임과 관련된 코드에 영향을 미칠 수 있다.
+    - 유지보수에 매우 비효율적  
+- O : Open-Closed, 개방-폐쇄 원칙
+- L : Liskov Substitution, 리스코프 치환 원칙
+- I : Interface Segregation, 인터페이스 분리 원칙
+- D : Dependency Inversion, 의존 역전 원칙
