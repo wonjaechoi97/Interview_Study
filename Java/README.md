@@ -17,10 +17,41 @@
 -
 
 ### 객체지향의 구성요소
-- 캡슐화
-- 정보 은닉
-- 상속
-- 다형성
+#### 캡슐화
+- 변수와 메서드를 하나의 클래스의 정의해서 서로 관계가 깊은 변수와 함수를 함께 다룰 수 있도록 한 것.
+- 예) 시간을 다루는 경우 
+  - 객체지향적 코드 
+  ```java
+  class Time{
+    int hour;
+    int minute;
+    float second;
+  }
+  
+  Time t1 = new Time();
+  Time t2 = new Time();
+  Time t3 = new Time();
+  
+  //배열에 담는 경우
+  Time[] t = new Time[3];
+  t[0]=new Time();
+  t[1]=new Time();
+  t[2]=new Time();
+  ```
+  - 비객체지향적 코드: 시간, 분, 초를 따로 변수 선언하는 방법
+  ```java
+  int hour1, hour2, hour3;
+  int minute1, minute2, minute3;
+  int second1, second2, second3;
+  
+  //배열에 담는 경우
+  int[] hour = new int[3];
+  int[] minute = new int[3];
+  int[] second = new int[3];
+  ```
+#### 정보 은닉
+#### 상속
+#### 다형성
 
 
 ### 객체지향 설계 5 원칙 S.O.L.I.D
