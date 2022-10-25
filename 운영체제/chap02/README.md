@@ -2,7 +2,7 @@
 
 하드웨어의 동작과 하드웨어 위에서 프로그램이 돌아가는 방식.
 
-![시스템 구조.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/65d0cea5-25af-4fc2-ba16-16e45a3ebc31/시스템_구조.png)
+<img width="600" src="https://github.com/wonjaechoi97/Interview_Study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/img/시스템%20구조.png">
 
 ## 프로그램의 실행 방식
 
@@ -89,7 +89,7 @@
 
 ## 저장장치 계층 구조
 
-![what-is-the-operating-system-4.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fa2642db-eed1-4e55-91d2-4c3576af1345/what-is-the-operating-system-4.png)
+<img width="600" src="https://github.com/wonjaechoi97/Interview_Study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/img/저장장치계층.png">
 
 - 레지스터 위에 CPU가 존재하고 위로 올라갈 수록 속도가 빠르고, 비싸고, 용량이 작다.
 - CPU는 빠르게 인스트럭션을 처리하는데 DRAM과 같은 메인 메모리에 접근하는 것은 시간이 오래 걸리기 때문에 속도 차이를 완충 하기 위해 캐시 메모리를 가진다.
