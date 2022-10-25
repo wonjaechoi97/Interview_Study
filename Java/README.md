@@ -55,7 +55,7 @@
 
 
 ### JVM의 메모리 구조
-![콜스택](https://user-images.githubusercontent.com/62707891/197651736-2f6b0fad-2b7a-4cfb-959c-f3f1820f82c4.png)
+<img width="400" src="https://github.com/wonjaechoi97/Interview_Study/blob/main/Java/img/%EC%BD%9C%EC%8A%A4%ED%83%9D.png">
 - 메서드 영역
   - 프로그램 실행 중 특정 클래스가 사용되면, JVM은 해당 클래스의 클래스 파일을 읽어서 분석 후 클래스에 대한 정보(클래스 데이터)를 이곳에 저장한다. 클래스 변수도 같이 생성 된다.
 - 힙(heap)
