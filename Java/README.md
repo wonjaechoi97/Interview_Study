@@ -55,7 +55,7 @@
 #### 정보 은닉
 #### 상속
 #### 다형성
-
+- 같은 자료형에 여러 가지 객체를 대입하여 다양한 결과를 얻어내는 성질을 의미한다. 
 
 ### JVM의 메모리 구조
 <img width="400" src="https://github.com/wonjaechoi97/Interview_Study/blob/main/Java/img/%EC%BD%9C%EC%8A%A4%ED%83%9D.png">
