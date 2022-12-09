@@ -18,7 +18,7 @@ API(Application Programming Interface, 응용 프로그램 프로그래밍 인�
 
 
 ## MSA
-### MSA란[블로그 설명](https://blog.naver.com/hyundai-autoever/222255869029)
+### MSA란 [블로그 설명](https://blog.naver.com/hyundai-autoever/222255869029)
 - 한 개의 시스템을 서비스별로 독립적으로 분리하여 배포하는 방식으로 각각의 서비스는 api를 통해서만 데이터를 교환하며, 1개의 큰 서비스를 구성합니다.
 - 모든 시스템의 구성요소가 한 프로젝트에 통합되어 있는 모놀리식 아키텍쳐의 한계점을 극복하고자 설계되었습니다. 
 - MSA를 사용하면 일부 서비스에 장애가 발생하여도, 다른 서비스를 문제없이 사용할 수 있다.
