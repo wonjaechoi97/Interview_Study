@@ -49,7 +49,8 @@ API(Application Programming Interface, 응용 프로그램 프로그래밍 인�
 - CI툴에서는 변경된 소스코드를 대상으로 Build, Test, Merge를 진행합니다. 이 과정들이 완료되면 슬랙, 카카오톡, 메일 등을 통해 통합 결과를 알린다.
 ### CD란
 #### CD란
-- 지속적인 제공, 지속적인 배포 모두를 
+- 지속적인 제공(Continuous Delivery), 지속적인 배포(Continuous Deployment) 모두를 의미
+  - 지속적인 제공 : 개발자들이 애플리케이션에 적용한 변경 사항이 버그 테스트를 거쳐 리포지토리(예: GitHub 또는 컨테이너 레지스트리)에 자동으로 업로드되는 것을 뜻한다.
 
 
 ## 스프링
