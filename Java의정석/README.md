@@ -139,7 +139,82 @@ class Child extends Parent {
   ...                            
   }
 }
-                                       
-                                                                               
+```
+#### super
+- 조상 클래스의 멤버와 자손 클래스의 멤버를 구분하기 위해 사용하는 것.
+- 모든 인스턴스 메서드가 가지고 있는 자신이 속한 `인스턴스의 주소`를 가진 지역변수가 `this`, `super`의 값이 된다.
+- 다음의 경우 `this.x = 20 super.x = 10`가 정답
+- 이처럼 조상 클래스에 선언된 멤버 변수와 같은 이름의 멤버 변수를 자손 클래스에서 중복 정의하는 것도 가능하다.
+``` java
+class Parent{
+  int x = 10;
+}
 
-                                       
+class Child extends Parent{
+  int x = 20;
+  void method(){
+    sout("this.x = " + this.x);
+    sout("super.x = "+ super.x);
+  }
+}
+```
+- 메서드 역시 super를 통해 조상 메서드를 호출 가능
+  - 조상 클래스의 메서드의 내용에 *추가적으로* 작업을 덧붙이는 경우
+  - 이후 조상 클래스의 메서드가 변경되면 변경된 내용이 반영된다.
+
+``` jav
+class Point{
+    int x;
+    int y;
+
+    String getLocation() {
+        return "x : " + x + ", y :" + y;
+    }
+}
+
+class Point3D extends Point{
+    int z;
+  
+    String getLocation(){
+        // return "x :" + x + ", y :" + y + , z :" + z;
+        return super.getLocation() + ", z :" + z;
+    }
+
+}
+```
+
+#### super() - 조상 클래스의 생성자
+- 자손 클래스가 인스턴스하면 자손의 멤버와 조상의 멤버가 모두 합쳐진 하나의 인스턴스가 생성된다.
+- 그렇기 때문에 조상의 멤버에 대한 초기화가 필요하기 때문에 조상 클래스의 생성자가 호출 되어야 한다.
+  - Object까지 계속된다.
+- Object 제외한 모든 클래스의 생성자는 **첫 줄에 반드시 자신의 다른 생성자나 조상의 생성자 호출해야한다.**
+  - 없다면 컴파일러가 자동으로 `super();`를 추가한다.
+    - 하지만 `super();` 시행 시 조상 클래스에 파라미터 없는 생성자가 없다면 오류가 발생한다. 
+``` java
+class Point{
+    int x,y;
+    Point2(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+
+    String getLocation() {
+        return "x : " + x + ", y :" + y;
+    }
+}
+
+class Point3D extends Point{
+    int z;
+    public Point3D2(int x, int y, int z){
+        super(); // <--- 여기서 컴파일 에러 1. Point()를 추가, 2. super(x,y);를 추가하는 방식으로 해결한다. 
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+   
+    String getLocation(){
+        return "x :" + x + ", y :" + y + , z :" + z;
+    }
+}
+```
+- 어떤 클래스의 인스턴스를 생성하면 클래스 상속관계의 최고조상인 Object클래스까지 거슬러 올라가면서 모든 조상 클래스의 생성자가 순서대로 호출된다.
