@@ -117,7 +117,29 @@ class TVCR extends Tv{
   - 조상 클래스가 `protected`이면 적어도 `protected`, `public`.
   - private<(default)<protected<public 
 - 조상 클래스의 메서드보다 많은 수의 예외 던지기 불가.
-``` java
+  - 아래의 두 번째 경우에는 모든 예외의 최고 조상인 Exception을 던졌기 때문에 더 많은 예외를 던져서 오류가 있다.
                                        
-                                     
+``` java
+//잘된 경우
+class Parent {                                    
+  void parentMethod() throws IOException, SQLException {
+  ...                            
+  }
+}
+                                       
+class Child extends Parent {                                    
+  void parentMethod() throws IOException {
+  ...                            
+  }
+}
+                                       
+// 잘못된 경우                                       
+class Child extends Parent {                                    
+  void parentMethod() throws Exception {
+  ...                            
+  }
+}
+                                       
+                                                                               
 
+                                       
