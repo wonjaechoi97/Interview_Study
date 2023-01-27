@@ -74,7 +74,7 @@ TCP/IP는 프로토콜 스택(프로토콜 묶음)으로 TCP, IP 뿐만 아니�
 |---|---|
 |애플리케이션 계층(Application)|Data|
 |프레젠테이션 계층(Presentation)|Data|
-|세션계층(Session)|Data|
+|세션 계층(Session)|Data|
 |트랜스포트 계층(Transport)|Segments|
 |네트워크 계층(Network)|Packets|
 |데이터 링크 계층(Data Link)|Frames|
