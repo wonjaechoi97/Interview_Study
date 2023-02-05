@@ -193,7 +193,7 @@ class Point3D extends Point{
 ``` java
 class Point{
     int x,y;
-    Point2(int x, int y){
+    Point(int x, int y){
         this.x = x;
         this.y = y;
     }
@@ -229,7 +229,7 @@ class Point3D extends Point{
 - 하나의 소스파일에는 첫 번째 문장으로 단 한번의 패키지 선언만을 허용한다.
 - 모든 클래스는 반드시 하나의 패키지에 속해야 한다.
 - 패키지는 점(.)을 구분자로 하여 계층구조를 구성할 수 있다.
-- 패키즈는 물리적으로 클래스 파일(.class)를 포함하는 **하나의 디렉토리**
+- 패키는 물리적으로 클래스 파일(.class)를 포함하는 **하나의 디렉토리**
 
 #### 패키지의 선언
 - 주로 소문자 사용(클래스와 구분 위해)
@@ -266,3 +266,38 @@ C : \jdk1.8\work>javac -d . PackageTest.java
 - JDK에 기본적으로 설정되어 있는 클래스패스를 이용하면 따로 설정 필요 없음
   - 추가하고자 하는 클래스를 `JDK설치디렉토리\jre\classes`디렉토리에 
   - `jar`파일인 경우 `JDK설치디렉토리\jre\lib\ext` 디렉토리에 
+### 3.3 import문
+- import 문을 사용해서 클래스의 패키지명을 명시해서 소스코드에 사용되는 클래스이름에서 패키지명 생략 가능하다.
+  - 컴파일러에게 패키지에 대한 정보를 제공하는 것.
+  - 컴파일러가 사용된 모든 클래스의 패키지를 알아낸 다음, 모든 클래스 이름 앞에 패키지명을 붙여준다.
+  
+### 3.4 import 문의 선언
+- import문은 package 선언문 다음 클래스 선언문 이전에 위치해야 한다.
+- 한 소스파일 안에서 여러 번 선언할 수 있다.
+``` java
+import 패키지명.클래스명;
+//or
+import 패키지명.*; //패키지 내에서 여러 클래스를 사용할 때
+```
+
+
+- 클래스 이름 대신 `*`을 사용하는 것이 하위 패키지의 클래스를 포함하는 것은 아니다.
+``` java
+import java.util.*;
+import java.text.*;
+
+//위 두개를 아래 하나로 대체할 수 없다!!
+import java.*;
+
+```
+- 같은 패키지 안의 클래스는 패키지명 생략할 수 있다.
+
+### 3.5 static import 문
+- static import 문을 사용하면 static 멤버 호출 시 클래스 이름 생략 가능하다.
+```java
+import static java.lang.Integer.*; //--> Integer클래스의 모든 static 메서드
+import static java.lang.Math.random; //Math.random()만. 괄호 안붙임.
+import static java.lang.System.out; // System.out을 out만으로 참조가능
+```
+
+`System.out.println(Math.random());`->`out.println(random());`
