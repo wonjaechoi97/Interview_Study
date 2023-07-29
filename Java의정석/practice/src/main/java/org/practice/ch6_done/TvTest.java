@@ -1,4 +1,4 @@
-package org.practice.chapter6;
+package org.practice.ch6_done;
 
 public class TvTest {
     public static void main(String[] args) {
